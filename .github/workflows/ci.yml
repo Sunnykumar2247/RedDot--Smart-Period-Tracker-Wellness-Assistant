@@ -121,11 +121,12 @@ jobs:
       - name: Build frontend
         working-directory: ./frontend
         run: |
-          DISABLE_ESLINT_PLUGIN=true npm run build
+          export CI=false
+          export DISABLE_ESLINT_PLUGIN=true
+          npm run build
         env:
           REACT_APP_API_URL: http://localhost:8080
           GENERATE_SOURCEMAP: false
-          CI: "false"
         continue-on-error: false
 
   lint:

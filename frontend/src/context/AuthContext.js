@@ -45,6 +45,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     fetchUserProfile();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token, logout]);
 
   const login = async (email, password) => {
