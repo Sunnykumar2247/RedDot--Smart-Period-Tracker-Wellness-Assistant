@@ -16,7 +16,7 @@
     <artifactId>reddot-api</artifactId>
     <version>1.0.0</version>
     <name>RedDot API</name>
-    <description>Smart Period Tracker & Wellness Assistant - Core API</description>
+    <description>Smart Period Tracker &amp; Wellness Assistant - Core API</description>
     
     <properties>
         <java.version>17</java.version>
