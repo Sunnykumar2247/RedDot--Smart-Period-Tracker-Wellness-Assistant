@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14-alpine
+    container_name: reddot-db
+    environment:
+      POSTGRES_DB: reddot
+      POSTGRES_USER: reddot_user
+      POSTGRES_PASSWORD: reddot_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U reddot_user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  spring-boot-api:
+    build:
+      context: ./backend/spring-boot-api
+      dockerfile: Dockerfile
+    container_name: reddot-api
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/reddot
+      SPRING_DATASOURCE_USERNAME: reddot_user
+      SPRING_DATASOURCE_PASSWORD: reddot_password
+      JWT_SECRET: ${JWT_SECRET:-your-secret-key-change-in-production}
+      JWT_EXPIRATION: 86400000
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./backend/spring-boot-api:/app
+
+  prediction-service:
+    build:
+      context: ./backend/prediction-service
+      dockerfile: Dockerfile
+    container_name: reddot-prediction
+    ports:
+      - "8001:8001"
+    environment:
+      DATABASE_URL: postgresql://reddot_user:reddot_password@postgres:5432/reddot
+      API_URL: http://spring-boot-api:8080
+    depends_on:
+      - postgres
+      - spring-boot-api
+
+volumes:
+  postgres_data:
+

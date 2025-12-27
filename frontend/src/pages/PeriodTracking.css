@@ -1,0 +1,63 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  font-size: 32px;
+  color: var(--text-color);
+}
+
+.period-form-card {
+  margin-bottom: 24px;
+}
+
+.periods-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.period-card {
+  border-left: 4px solid var(--primary-color);
+}
+
+.period-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.period-header h3 {
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.period-status {
+  padding: 4px 12px;
+  background: var(--accent-color);
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.period-dates {
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.period-pain {
+  color: var(--secondary-color);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.period-notes {
+  color: var(--text-light);
+  font-style: italic;
+}
+

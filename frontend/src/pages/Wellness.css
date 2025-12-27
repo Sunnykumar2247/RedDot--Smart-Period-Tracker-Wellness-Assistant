@@ -1,0 +1,33 @@
+.wellness-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.wellness-tip-card {
+  background: linear-gradient(135deg, #f8d7da 0%, #ff8fb3 100%);
+}
+
+.wellness-tip-card h2 {
+  color: var(--text-color);
+  margin-bottom: 16px;
+}
+
+.wellness-tip-text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: var(--text-color);
+}
+
+.wellness-log-card h2 {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .wellness-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

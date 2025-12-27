@@ -1,0 +1,104 @@
+.dashboard-header {
+  margin-bottom: 32px;
+}
+
+.dashboard-header h1 {
+  font-size: 32px;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  color: var(--text-light);
+  font-size: 18px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: var(--text-color);
+}
+
+.prediction-card {
+  background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+  color: white;
+}
+
+.prediction-card h2 {
+  color: white;
+}
+
+.prediction-content {
+  color: white;
+}
+
+.prediction-date {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.prediction-confidence {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+.prediction-explanation {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.prediction-details {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.detail-label {
+  opacity: 0.9;
+}
+
+.wellness-card {
+  background: #f8f9fa;
+}
+
+.wellness-tip {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.quick-actions .action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
