@@ -25,6 +25,13 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
+    if (!token) {
+      setLoading(false);
+      return;
+    }
+
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    
     const fetchUserProfile = async () => {
       try {
         const response = await axios.get('http://localhost:8080/api/profile');
@@ -37,15 +44,8 @@ export const AuthProvider = ({ children }) => {
       }
     };
 
-    if (token) {
-      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-      // Fetch user profile
-      fetchUserProfile();
-    } else {
-      setLoading(false);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [token]);
+    fetchUserProfile();
+  }, [token, logout]);
 
   const login = async (email, password) => {
     try {
