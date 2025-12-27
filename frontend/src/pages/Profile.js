@@ -6,7 +6,6 @@ import { toast } from 'react-toastify';
 import './Profile.css';
 
 const Profile = () => {
-  const { user: authUser } = useAuth();
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
   const [editing, setEditing] = useState(false);
