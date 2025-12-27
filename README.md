@@ -1,21 +1,30 @@
 # RedDot – Smart Period Tracker & Wellness Assistant
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Access_Now-brightgreen?style=for-the-badge)](https://reddot-app.vercel.app)
-[![Frontend](https://img.shields.io/badge/Frontend-Vercel-blue?style=flat-square)](https://reddot-app.vercel.app)
-[![Backend API](https://img.shields.io/badge/Backend-Render-orange?style=flat-square)](https://reddot-api.onrender.com)
-[![Prediction Service](https://img.shields.io/badge/Prediction-Render-purple?style=flat-square)](https://reddot-prediction.onrender.com)
+[![CI/CD](https://github.com/Sunnykumar2247/RedDot--Smart-Period-Tracker-Wellness-Assistant/actions/workflows/ci.yml/badge.svg)](https://github.com/Sunnykumar2247/RedDot--Smart-Period-Tracker-Wellness-Assistant/actions)
+[![Deploy Guide](https://img.shields.io/badge/📖_Deployment_Guide-Read_Here-blue?style=flat-square)](DEPLOYMENT.md)
+[![Status](https://img.shields.io/badge/Status-Ready_to_Deploy-green?style=flat-square)]()
 
 ## 🌐 **Live Application**
 
-### **👉 [Click Here to Access the Live Website](https://reddot-app.vercel.app)**
+> ⚠️ **IMPORTANT**: The application needs to be deployed first! The links below are **placeholders**. 
+> 
+> **To get your live application:**
+> 1. Follow the [Deployment Guide](DEPLOYMENT.md) to deploy to Vercel/Render
+> 2. Update the URLs below with your actual deployment URLs
+> 3. Commit and push the changes
 
-**Direct Access Links:**
-- 🎨 **Frontend (React App)**: [https://reddot-app.vercel.app](https://reddot-app.vercel.app)
-- 🔧 **Backend API**: [https://reddot-api.onrender.com](https://reddot-api.onrender.com)
-- 🤖 **Prediction Service**: [https://reddot-prediction.onrender.com](https://reddot-prediction.onrender.com)
-- 📚 **API Documentation**: [https://reddot-api.onrender.com/swagger-ui.html](https://reddot-api.onrender.com/swagger-ui.html)
+### **👉 Deploy Your Application**
 
-> **Note**: If the links above don't work, the application may need to be deployed. See [Deployment Guide](#-deployment) below.
+**After deployment, your links will be:**
+- 🎨 **Frontend (React App)**: `https://your-app.vercel.app` (Deploy to [Vercel](https://vercel.com))
+- 🔧 **Backend API**: `https://your-api.onrender.com` (Deploy to [Render](https://render.com))
+- 🤖 **Prediction Service**: `https://your-prediction.onrender.com` (Deploy to [Render](https://render.com))
+- 📚 **API Documentation**: `https://your-api.onrender.com/swagger-ui.html`
+
+**Quick Deploy:**
+- [📖 Full Deployment Instructions](DEPLOYMENT.md)
+- [🚀 Deploy Frontend to Vercel](https://vercel.com/new)
+- [🚀 Deploy Backend to Render](https://render.com)
 
 📅 **Project Duration:** Feb 2025 – Apr 2025
 
