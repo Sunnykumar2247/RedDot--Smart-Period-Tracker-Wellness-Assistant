@@ -1,5 +1,22 @@
 # RedDot – Smart Period Tracker & Wellness Assistant
 
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Access_Now-brightgreen?style=for-the-badge)](https://reddot-app.vercel.app)
+[![Frontend](https://img.shields.io/badge/Frontend-Vercel-blue?style=flat-square)](https://reddot-app.vercel.app)
+[![Backend API](https://img.shields.io/badge/Backend-Render-orange?style=flat-square)](https://reddot-api.onrender.com)
+[![Prediction Service](https://img.shields.io/badge/Prediction-Render-purple?style=flat-square)](https://reddot-prediction.onrender.com)
+
+## 🌐 **Live Application**
+
+### **👉 [Click Here to Access the Live Website](https://reddot-app.vercel.app)**
+
+**Direct Access Links:**
+- 🎨 **Frontend (React App)**: [https://reddot-app.vercel.app](https://reddot-app.vercel.app)
+- 🔧 **Backend API**: [https://reddot-api.onrender.com](https://reddot-api.onrender.com)
+- 🤖 **Prediction Service**: [https://reddot-prediction.onrender.com](https://reddot-prediction.onrender.com)
+- 📚 **API Documentation**: [https://reddot-api.onrender.com/swagger-ui.html](https://reddot-api.onrender.com/swagger-ui.html)
+
+> **Note**: If the links above don't work, the application may need to be deployed. See [Deployment Guide](#-deployment) below.
+
 📅 **Project Duration:** Feb 2025 – Apr 2025
 
 🎯 **Project Goal:** Build a secure, intelligent, and user-friendly menstrual cycle & wellness tracking platform.
@@ -201,7 +218,74 @@ See `.github/workflows/ci.yml` for details.
 - [API Documentation](docs/API_DOCUMENTATION.md)
 - [Database Schema](docs/DATABASE_SCHEMA.md)
 - [Setup Guide](docs/SETUP_GUIDE.md)
+- [Deployment Guide](DEPLOYMENT.md)
 - [Project Summary](PROJECT_SUMMARY.md)
+
+## 🚀 Deployment
+
+### Quick Deploy Options
+
+#### Frontend (React) - Vercel/Netlify
+1. **Vercel** (Recommended):
+   - Connect your GitHub repository to Vercel
+   - Set build directory to `frontend`
+   - Add environment variable: `REACT_APP_API_URL=https://your-backend-url.com`
+   - Deploy automatically on push
+
+2. **Netlify**:
+   - Connect repository to Netlify
+   - Build command: `cd frontend && npm install && npm run build`
+   - Publish directory: `frontend/build`
+
+#### Backend (Spring Boot) - Render/Railway
+1. **Render**:
+   - Create new Web Service
+   - Connect GitHub repository
+   - Build command: `cd backend/spring-boot-api && ./mvnw clean package`
+   - Start command: `java -jar backend/spring-boot-api/target/*.jar`
+   - Add PostgreSQL database
+   - Set environment variables
+
+2. **Railway**:
+   - Connect repository
+   - Add PostgreSQL service
+   - Configure environment variables
+   - Deploy automatically
+
+#### Prediction Service (FastAPI) - Render/Railway
+1. **Render**:
+   - Create new Web Service
+   - Build command: `cd backend/prediction-service && pip install -r requirements.txt`
+   - Start command: `cd backend/prediction-service && uvicorn main:app --host 0.0.0.0 --port $PORT`
+
+### Environment Variables for Deployment
+
+**Backend (Spring Boot):**
+```env
+SPRING_DATASOURCE_URL=jdbc:postgresql://your-db-host:5432/reddot
+SPRING_DATASOURCE_USERNAME=your-username
+SPRING_DATASOURCE_PASSWORD=your-password
+JWT_SECRET=your-secret-key-minimum-32-characters
+JWT_EXPIRATION=86400000
+PREDICTION_SERVICE_URL=https://your-prediction-service-url.com
+FRONTEND_URL=https://your-frontend-url.com
+```
+
+**Frontend (React):**
+```env
+REACT_APP_API_URL=https://your-backend-api-url.com
+```
+
+**Prediction Service (FastAPI):**
+```env
+DATABASE_URL=postgresql://your-db-host:5432/reddot
+API_URL=https://your-backend-api-url.com
+```
+
+### One-Click Deploy
+
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Sunnykumar2247/RedDot--Smart-Period-Tracker-Wellness-Assistant)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 
 ## 🐳 Docker Setup
 
