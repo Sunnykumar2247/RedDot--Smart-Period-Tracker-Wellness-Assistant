@@ -24,6 +24,7 @@ export const AuthProvider = ({ children }) => {
     delete axios.defaults.headers.common['Authorization'];
   }, []);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!token) {
       setLoading(false);
@@ -45,7 +46,6 @@ export const AuthProvider = ({ children }) => {
     };
 
     fetchUserProfile();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token, logout]);
 
   const login = async (email, password) => {
